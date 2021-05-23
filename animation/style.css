@@ -1,0 +1,79 @@
+/*Обнуление*/
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+	background-color: #333;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #fff;
+	font-size: 16px;
+	line-height: 24px;
+    padding: 0 50px 0;
+}
+a {
+	color: #794f45;
+}
+h1 {
+	font-size: 40px;
+	margin: 0px 0px 50px 0px;
+}
+h2 {
+	font-size: 30px;
+	margin: 0px 0px 20px 0px;
+}
+p {
+	margin: 20px 0;
+}
+
+.code-item {
+    padding: 16px 20px 19px 20px;
+    background: #F7F6D8;
+}
+
+.code-item__main {
+    color: #333333;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.code-item__descr {
+    display: block;
+    padding: 0px 0px 0px 15px;
+    color: #6C6C6C;
+    font-size: 18px;
+    line-height: 21px;
+    word-wrap: break-word;
+}
+
+.content__circle {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    animation-name: white-circle;
+    animation-duration: 2s;
+}
+
+@keyframes white-circle {
+    /* вместо from/to можно писать % и более гибко расписывать шаги */
+    /* from {
+        начальные стили анимации
+    } to {
+        конечные стили анимации
+    } */
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 50px;
+    }
+}

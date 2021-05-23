@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS animation и @keyframes за 12 минут. Подробный разбор CSS свойств анимации + шпаргалка.</title>
+</head>
+<body>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GKgOOuTL0po" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p><a href="https://fls.guru/cssanimation.html">Шпаргалка</a></p>
+    <p>С помощью ключевых кадров @keyframes делаем взаимодействие с страницей более динамичным.</p>
+    <div class="wrapper">
+        <div class="content">
+            <div class="content__circle"></div>
+        </div>
+
+        <div class="block-item__code code-item">
+            <small>/* селектор */</small>
+            <p class="code-item__main">.animation__circle{</p>
+                <span class="code-item__descr">width: 100px;</span>
+                <span class="code-item__descr">height: 100px;</span>
+                <span class="code-item__descr">border-radius: 50%;</span>
+                <span class="code-item__descr">background-color: <i style="background-color: #5e5373;color: #fff;">#5e5373</i>;</span>
+                <span class="code-item__descr">position: relative;</span>
+                <span class="code-item__descr">animation-name: <strong>circle</strong>;</span>
+                <span class="code-item__descr">animation-duration: <strong>1s</strong>;</span>
+                <span class="code-item__descr">animation-timing-function: <strong>linear</strong>;</span>
+                <span class="code-item__descr"><b>animation-iteration-count: <strong>3</strong>;</b></span>
+            <p class="code-item__main">}</p>
+            <small>/* ключевые кадры */</small>
+            <p class="code-item__main">@keyframes <strong>circle</strong>{</p>
+                <span class="code-item__descr">0%{</span>
+                    <span class="code-item__descr"><span class="code-item__descr">left: 0%;</span></span>
+                <span class="code-item__descr">}</span>
+                <span class="code-item__descr">50%{</span>
+                    <span class="code-item__descr"><span class="code-item__descr">border-radius: 0%;</span></span>
+                <span class="code-item__descr">}</span>
+                <span class="code-item__descr">100%{</span>
+                    <span class="code-item__descr"><span class="code-item__descr">left: 50%;</span></span>
+                <span class="code-item__descr">}</span>
+            <p class="code-item__main">}</p>
+        </div>
+
+        <h3>ключевые свойства для запуска анимации:</h3>
+        <strong>Все эти стили указываем на элемента который необходимо анимировать.</strong>
+        <p>animation-name: white-circle; - указываем в классе какая анимация будет использоваться</p>
+        <p>animation-duration: 2s; - для запуска анимации необходимо задать время которое она будет выполняться.</p>
+        <h3>Дополнительные совойства</h3>
+        <p>animation-play-state: paused; - ставим анимацию на паузу, например при наведении мышью (псевдокласс hover)</p>
+        <p>animation-delay: 1s; - отвечает за задержку перед началом анимации</p>
+        <p>animation-iteration-count: infinite; - указываем сколько раз анимация должна повторяться. infinite - бесконечно, можно указать число - количество повторений.</p>
+        <p>animation-fill-mode: none; - Определяет какие значения анимируемых css свойств применятся к объекту после завершения анимации<br>
+        none - значение по умолчанию<br>
+        forwards - применяются конечные стили<br>
+    </p>
+    <h3>Универсальное задание параметров для анимации</h3>
+    <p>animation: 3s linear 1s infinite running slidein; - краткая форма<br>
+        animation это короткая запись (последовательность указания параметров как указано дальше) для animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode и animation-play-state.
+    </p>
+    <p>animation: circle 1s linear infinite normal running 0s both;</p>
+    <p>Если нужно применить сразу 2 анимации к одному элементу, то просто в свойстве animation через запятую перечисляем вторые параметры:<br>
+        animation: circle 1s linear infinite normal running 0s both, <br>
+        red-circle 5s linear infinite normal running 0s both;
+    </p>
+    </div>
+
+</body>
+</html>
